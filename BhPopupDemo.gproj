@@ -1,0 +1,23 @@
+<project>
+ <properties autorotation="0" fps="60" scaleMode="3" iosDevice="0" packageName="com.yourdomain.yourapp" logicalHeight="1024" logicalWidth="768" retinaDisplay="0" assetsOnly="0" orientation="1" architecture="0">
+  <imageScales/>
+ </properties>
+ <folder name="Fonts">
+  <file source="Fonts/Tahoma.ttf"/>
+ </folder>
+ <folder name="Images">
+  <file source="Images/BhPopupDemo.txt"/>
+  <file source="Images/BhPopupDemo.png"/>
+ </folder>
+ <folder name="Library">
+  <file source="../../Misc/gtween.lua"/>
+  <file source="../../Misc/easing.lua"/>
+  <file source="../../Gideros/SceneManager/scenemanager.lua"/>
+ </folder>
+ <file source="AnimalPopup.lua"/>
+ <file source="BhPopup.lua"/>
+ <file source="ForestScene.lua"/>
+ <file source="LoadingPopup.lua"/>
+ <file source="StartScene.lua"/>
+ <file source="main.lua"/>
+</project>

@@ -1,0 +1,6 @@
+Bear.png, 2, 772, 401, 341, 0, 0, 0, 0
+Butterfly.png, 1624, 530, 401, 353, 0, 0, 0, 0
+CastleBackground.png, 2, 2, 1024, 768, 0, 0, 0, 0
+Loading.png, 1028, 530, 594, 297, 0, 0, 0, 0
+Owl.png, 405, 772, 401, 299, 0, 0, 0, 0
+PopupBackground.png, 1028, 2, 626, 526, 0, 0, 0, 0
