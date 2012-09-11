@@ -15,7 +15,6 @@ end
 function StartScene:init()
 	local text=TextField.new(TTFont.new("Fonts/Tahoma.ttf", 40), "Touch to Start")
 	text:setPosition((application:getContentWidth()-text:getWidth())/2, application:getContentHeight()/2)
-	self:addEventListener(Event.MOUSE_DOWN, self.onStartTouched, self)
+	self:addEventListener(Event.MOUSE_UP, self.onStartTouched, self)
 	self:addChild(text)
---	stage:addChild(self)
 end

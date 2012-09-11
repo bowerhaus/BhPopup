@@ -6,12 +6,12 @@ AnimalPopup=Core.class(BhPopup)
 
 local w, h=application:getContentWidth(), application:getContentHeight()
 
-function AnimalPopup:onMouseDown(event)
+function AnimalPopup:onMouseUp(event)
 	-- Close the popup on any touch inside
 	if self:hitTestPoint(event.x, event.y) then
 		self:exit()
-		event:stopPropagation()
 	end
+	event:stopPropagation()
 end
 
 function AnimalPopup:init(options, name)
@@ -31,5 +31,5 @@ function AnimalPopup:init(options, name)
 	text:setTextColor(0xffffff)
 	self:addChild(text)
 	
-	self:addEventListener(Event.MOUSE_DOWN, self.onMouseDown, self)
+	self:addEventListener(Event.MOUSE_UP, self.onMouseUp, self)
 end

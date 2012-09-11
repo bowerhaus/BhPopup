@@ -1,6 +1,6 @@
 ForestScene=Core.class(Sprite)
 
-function ForestScene:onMouseDown(event)
+function ForestScene:onMouseUp(event)
 	for k, v in pairs(self.animals) do
 		if v:hitTestPoint(event.x, event.y) then
 			AnimalPopup.new({enterTransition=BhPopup.overFromBottom, enterExitDuration=0.5}, k)
@@ -35,5 +35,5 @@ function ForestScene:init()
 	self:addChild(owl)
 	self.animals["Owl"]=owl
 		
-	self:addEventListener(Event.MOUSE_DOWN, self.onMouseDown, self)
+	self:addEventListener(Event.MOUSE_UP, self.onMouseUp, self)
 end
