@@ -112,7 +112,14 @@ end
 function BhPopup:onExitEnd()
 	self:removeFromParent()
 	self:dispatchEvent(Event.new("exitEnd"))
-	self:dispatchEvent(Event.new("complete"))
+	
+	local completeEvent=Event.new("complete")
+	completeEvent.value=self.value
+	self:dispatchEvent(completeEvent)
+	
+	if self.completionFunc then
+		self.completionFunc(self.value)
+	end
 end
 
 function BhPopup:enter()
@@ -121,7 +128,8 @@ function BhPopup:enter()
 	tween:addEventListener("complete", self.onEnterEnd, self)
 end
 
-function BhPopup:exit()
+function BhPopup:exit(value)
+	self.value=value
 	self:onExitBegin()
 	local tween=GTween.new(self, self.enterExitDuration, self:exitTransition(), {ease=self.exitEasing, dispatchEvents=true, swapValues=true})
 	tween:addEventListener("complete", self.onExitEnd, self)
@@ -152,6 +160,7 @@ function BhPopup:init(options)
 	self.exitTransition=options.exitTransition or self.enterTransition
 	self.exitEasing=options.exitEasing or self.enterEasing
 	self.autoRunFunc=options.autoRunFunc
+	self.completionFunc=options.onComplete
 	
 	-- Delay the enter() call to allow any subclasses to perform their setup first
 	self:queueCall(self.enter)

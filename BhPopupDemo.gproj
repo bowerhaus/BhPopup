@@ -2,10 +2,14 @@
  <properties autorotation="0" fps="60" scaleMode="3" iosDevice="0" packageName="com.yourdomain.yourapp" logicalHeight="1024" logicalWidth="768" retinaDisplay="0" assetsOnly="0" orientation="1" architecture="0">
   <imageScales/>
  </properties>
+ <file source="../BhDemoShield/BhDemoShield.lua"/>
  <folder name="Fonts">
   <file source="Fonts/Tahoma.ttf"/>
  </folder>
  <folder name="Images">
+  <file source="../BhHelpers/BhHelpers.lua"/>
+  <file source="../BhDemoShield/Images/HandFingerUp.png"/>
+  <file source="../BhDemoShield/Images/HandFingerDn.png"/>
   <file source="Images/BhPopupDemo.txt"/>
   <file source="Images/BhPopupDemo.png"/>
  </folder>
@@ -20,4 +24,5 @@
  <file source="LoadingPopup.lua"/>
  <file source="StartScene.lua"/>
  <file source="main.lua"/>
+ <dependency from="../BhDemoShield/BhDemoShield.lua" to="../BhHelpers/BhHelpers.lua"/>
 </project>

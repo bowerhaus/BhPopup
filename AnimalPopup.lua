@@ -26,7 +26,7 @@ function AnimalPopup:init(options, name)
 	image:setPosition(w/2, h/2)
 	self:addChild(image)
 	
-	local text=TextField.new(TTFont.new("Fonts/Tahoma.ttf", 50), "This is the "..name)
+	local text=TextField.new(TTFont.new("Fonts/Tahoma.ttf", 50), "This is a "..name)
 	text:setPosition((w-text:getWidth())/2, h/2+210)
 	text:setTextColor(0xffffff)
 	self:addChild(text)
