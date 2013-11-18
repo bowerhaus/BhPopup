@@ -161,6 +161,7 @@ function BhPopup:init(options)
 	self.exitEasing=options.exitEasing or self.enterEasing
 	self.autoRunFunc=options.autoRunFunc
 	self.completionFunc=options.onComplete
+	self.parent = options.parent or nil
 	
 	-- Delay the enter() call to allow any subclasses to perform their setup first
 	self:queueCall(self.enter)
